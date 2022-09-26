@@ -3,17 +3,14 @@ import java.util.Scanner;
 
 
 public class LampToggler {
-
-
     public static void main (String[]args){
-        Lampe L1 = new Lampe("lampe1");
-        Lampe L2 = new Lampe("lampe2");
-        Lampe L3 = new Lampe("lampe3");
-        Lampe L4 = new Lampe("lampe4");
-        Lampe L5 = new Lampe("lampe5");
+        Lampe L1 = new Lampe("lampe 1");
+        Lampe L2 = new Lampe("lampe 2");
+        Lampe L3 = new Lampe("lampe 3");
+        Lampe L4 = new Lampe("lampe 4");
+        Lampe L5 = new Lampe("lampe 5");
 
         Lampe selectedLampe = null;
-
         Scanner scanner = new Scanner (System.in);
 
         int valg = 0;
@@ -25,6 +22,9 @@ public class LampToggler {
             System.out.println(L5);
 
             System.out.println("Hvilken lampe skal ændres? (0 er afslut)");
+            if (scanner.hasNextInt())
+                valg = scanner.nextInt();
+            else valg = 0;
 
             try {
                 valg = scanner.nextInt();
@@ -33,15 +33,15 @@ public class LampToggler {
             }
 
             if (scanner.hasNext())
-            if (valg > 0 && valg <=5);
+            if (valg > 0 && valg <=5)
             selectedLampe = L1;
-             if (valg == 2);
+             else if (valg == 2)
             selectedLampe = L2;
-             if (valg == 3);
+             else if (valg == 3)
             selectedLampe = L3;
-             if (valg == 4);
+             else if (valg == 4)
             selectedLampe = L4;
-             if (valg == 5);
+             else if (valg == 5)
             selectedLampe = L5;
 
 
